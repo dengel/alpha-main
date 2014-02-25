@@ -5,8 +5,12 @@ alpha:
 beta:
   active: true
   path: /tmp/go/beta
-gamma: false
-delta: false
+gamma:
+  active: true
+  path: /tmp/go/gamma
+delta:
+  active: true
+  path: /tmp/go/delta
 epsilon: false
 zeta: false
 eta: false
