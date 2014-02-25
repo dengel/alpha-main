@@ -2,7 +2,9 @@
 alpha:
   active: true
   path: /opt/go/alpha
-beta: false
+beta:
+  active: true
+  path: /opt/go/beta
 gamma: false
 delta: false
 epsilon: false
