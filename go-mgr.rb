@@ -5,7 +5,8 @@ require 'yaml'
 
 class NextProject
 
-  BASEDIR = "~/Dropbox/go"
+  #BASEDIR = "~/Dropbox/go"
+  BASEDIR = "/tmp/go"
 
 	# Load project config file
 	def initialize()
@@ -57,8 +58,8 @@ class NextProject
     end
   end
 
-  def create_client_info(go)
-    path= BASEDIR + "/" + go + "/client/info.yml"
+  def create_control_info(go)
+    path= BASEDIR + "/" + go + "/meta/client.yml"
     puts "> Creating: #{path}"
     records = {
       "name" => "Acme",
@@ -68,19 +69,17 @@ class NextProject
       "realname" => "TBD",
       "status" => "NEW",
     }
-		File.open(path, 'w') {|f| f.write records.to_yaml }
-  end
+    File.open(path, 'w') {|f| f.write records.to_yaml }
 
-  def create_control_info(go)
     path= BASEDIR + "/" + go + "/meta/control.yml"
     puts "> Creating: #{path}"
     records = {
-      "github" => [ false ],
+      "status" => "NEW",
       "type" => "TBD",
-      "status" => "TBD",
       "penflip" => "TBD",
+      "github" => [ false ],
     }
-		File.open(path, 'w') {|f| f.write records.to_yaml }
+    File.open(path, 'w') {|f| f.write records.to_yaml }
 
     path= BASEDIR + "/" + go + "/meta/links.yml"
     puts "> Creating: #{path}"
@@ -94,24 +93,22 @@ class NextProject
         "link4" => "http://localhost/4",
        },
     }
-		File.open(path, 'w') {|f| f.write records.to_yaml }
+    File.open(path, 'w') {|f| f.write records.to_yaml }
 
   end
 
 end
 
-next_go = NextProject.new()
+proj = NextProject.new()
 
-next_name = next_go.next_project()
+next_name = proj.next_project()
 
 puts "*** Project #{next_name}" 
 
-next_go.set_value(next_name, next_go.build_project(next_name));
+proj.set_value(next_name, proj.build_project(next_name));
 
-next_go.update_file()
+proj.update_file()
 
-next_go.create_hierarchy(next_name)
+proj.create_hierarchy(next_name)
 
-next_go.create_client_info(next_name)
-
-next_go.create_control_info(next_name)
+proj.create_control_info(next_name)
