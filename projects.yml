@@ -11,8 +11,12 @@ gamma:
 delta:
   active: true
   path: /tmp/go/delta
-epsilon: false
-zeta: false
+epsilon:
+  active: true
+  path: /tmp/go/epsilon
+zeta:
+  active: true
+  path: /tmp/go/zeta
 eta: false
 theta: false
 iota: false
