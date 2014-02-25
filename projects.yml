@@ -1,22 +1,12 @@
 ---
 alpha:
   active: true
-  path: ~/Dropbox/go/alpha
-beta:
-  active: true
-  path: /tmp/go/beta
-gamma:
-  active: true
-  path: /tmp/go/gamma
-delta:
-  active: true
-  path: /tmp/go/delta
-epsilon:
-  active: true
-  path: /tmp/go/epsilon
-zeta:
-  active: true
-  path: /tmp/go/zeta
+  path: /opt/go/alpha
+beta: false
+gamma: false
+delta: false
+epsilon: false
+zeta: false
 eta: false
 theta: false
 iota: false
