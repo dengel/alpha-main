@@ -5,8 +5,7 @@ require 'yaml'
 
 class NextProject
 
-    #BASEDIR = "~/Dropbox/go"
-    BASEDIR = "/tmp/go"
+    BASEDIR = "/opt/go"
 
     # Load project config file
     def initialize()
