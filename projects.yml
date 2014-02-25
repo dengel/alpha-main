@@ -1,0 +1,27 @@
+---
+alpha:
+  active: true
+  path: ~/Dropbox/go/alpha
+beta: false
+gamma: false
+delta: false
+epsilon: false
+zeta: false
+eta: false
+theta: false
+iota: false
+kappa: false
+lambda: false
+mu: false
+nu: false
+xi: false
+omicron: false
+pi: false
+rho: false
+sigma: false
+tau: false
+upsilon: false
+phi: false
+chi: false
+psi: false
+omega: false
